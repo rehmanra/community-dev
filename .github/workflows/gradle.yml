@@ -37,7 +37,7 @@ jobs:
       continue-on-error: true
       with:
         # Slack channel ID where message will be posted. Needed if using bot token
-        channel-id: 'C047P3EK26N'
+        channel-id: ${{ secrets.SLACK_CI_CD_CHANNEL_ID }}
         # Message to post into Slack. Needed if using bot token
         slack-message: "Java build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
         # JSON payload to send to Slack if webhook route. If not supplied, json from GitHub event will be sent instead
