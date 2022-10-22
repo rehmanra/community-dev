@@ -39,7 +39,7 @@ jobs:
         # Slack channel ID where message will be posted. Needed if using bot token
         channel-id: 'C047P3EK26N'
         # Message to post into Slack. Needed if using bot token
-        slack-message: "GitHub build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+        slack-message: "Java build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
         # JSON payload to send to Slack if webhook route. If not supplied, json from GitHub event will be sent instead
         # payload: # optional
         # path to JSON payload to send to Slack if webhook route. If not supplied, json from GitHub event will be sent instead. If payload is provided, it will take preference over this field
