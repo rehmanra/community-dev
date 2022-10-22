@@ -1,8 +1,11 @@
 name: Angular
 on:
   push:
-    branches:
-      - main
+    paths:
+    - 'frontend/**'
+  pull_request:
+    paths: 
+    - 'frontend/**'
 
 jobs:
   build:
